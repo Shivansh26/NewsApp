@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.newsapp.R
 
 class MainActivity :AppCompatActivity() {
-    lateinit var sourceListFragment: SourceListFragment
+    private lateinit var sourceListFragment: SourceListFragment
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

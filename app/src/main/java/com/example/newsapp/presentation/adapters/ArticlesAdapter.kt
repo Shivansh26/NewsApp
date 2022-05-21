@@ -3,12 +3,9 @@ package com.example.newsapp.presentation.adapters
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.newsapp.ItemClickListener
@@ -84,51 +81,6 @@ class ArticlesAdapter (val context: Context, private val articles: ArrayList<Art
     }
 }
 
-//    override fun getFilter(): Filter {
-//        return object : Filter() {
-//            override fun performFiltering(query: CharSequence?): FilterResults {
-//                val charString = query.toString()
-//                //articles.clear()
-//                if (query.isNullOrBlank()) {
-//                    articlesFiltered = articles
-//                }
-//
-//                else{
-//                    val filteredList = ArrayList<Article>()
-//                    articles.filter { it.title.contains(charString, true) }
-//                        .forEach{filteredList.add(it)}
-//                    articlesFiltered = filteredList
-//                }
-//                return FilterResults().apply { values = articlesFiltered }
-//            }
-//
-//            @Suppress("UNCHECKED_CAST")
-//            override fun publishResults(query: CharSequence?, results: FilterResults?) {
-//                articlesFiltered = results?.values as ArrayList<Article>
-//                updateNewsArticles(articlesFiltered)
-//                //notifyDataSetChanged()
-//            }
-//        }
-//    }
-//}
-
-//    fun filter(query : String){
-//        val temp = ArrayList<Article>()
-//        if(!TextUtils.isEmpty(query)){
-//            for(d in articles){
-//                if(d.title.contains(query, true)){
-//                    temp.add(d)
-//                }
-//            }
-//        } else{
-//            temp.addAll(articles)
-//        }
-//
-//        updateNewsArticles(temp)
-//
-//
-//
-//    }
 
 
 
